@@ -1,0 +1,22 @@
+{
+  "name": "save-idiot-like-someone",
+  "version": "1.0.0",
+  "description": "mentoring website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HINCS/save-idiot-like-someone.git"
+  },
+  "author": "Kim & Chang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HINCS/save-idiot-like-someone/issues"
+  },
+  "homepage": "https://github.com/HINCS/save-idiot-like-someone#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
