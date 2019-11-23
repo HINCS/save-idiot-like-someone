@@ -1,0 +1,43 @@
+{
+  "name": "save-idiot-like-someone",
+  "version": "1.0.0",
+  "description": "mentoring website",
+  "main": "index.js",
+  "scripts": {
+    "dev:server": "nodemon --exec babel-node init.js -- delay 2",
+    "dev:assets": "WEBPACK_ENV=development webpack -w",
+    "build:assets": "WEBPACK_ENV=production webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HINCS/save-idiot-like-someone.git"
+  },
+  "author": "Kim & Chang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HINCS/save-idiot-like-someone/issues"
+  },
+  "homepage": "https://github.com/HINCS/save-idiot-like-someone#readme",
+  "dependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "autoprefixer": "^9.7.2",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "express": "^4.17.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
+    "pug": "^2.0.4",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^2.0.1"
+  }
+}
