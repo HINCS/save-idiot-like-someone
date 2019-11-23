@@ -223,3 +223,7 @@ Temporary Items
 .history
 
 # End of https://www.gitignore.io/api/osx,node,dotenv,intellij+all,visualstudiocode
+
+# build output
+src/static/
+dist/
