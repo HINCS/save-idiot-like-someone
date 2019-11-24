@@ -108,5 +108,5 @@ dist
 package-lock.json
 
 # build output
-src/static/
+# src/static/
 dist/
