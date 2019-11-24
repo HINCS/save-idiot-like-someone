@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/HINCS/save-idiot-like-someone#readme",
   "dependencies": {
+    "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.2",
     "@babel/node": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
@@ -43,8 +44,13 @@
   "scripts": {
     "dev:server": "nodemon --exec babel-node src/init.js -- delay 2",
     "dev:assets": "cd src && WEBPACK_ENV=development webpack -w",
-    "build:assets": "cd src && WEBPACK_ENV=production webpack",
     "lint": "eslint src/",
-    "fix": "eslint --fix src/"
+    "fix": "eslint --fix src/",
+    "clean": "rm -rf build",
+    "build:server": "babel src --out-dir build --ignore 'src/assets','src/static','src/webpack.config.js'",
+    "build:assets": "cd src && WEBPACK_ENV=production webpack",
+    "copy:static": "cp -R src/static src/views build/",
+    "build": "npm run clean && npm run lint && npm run build:server && npm run build:assets && npm run copy:static",
+    "start": "node build/init.js"
   }
 }

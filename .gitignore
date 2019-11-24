@@ -227,3 +227,4 @@ Temporary Items
 # build output
 src/static/
 dist/
+build/
