@@ -51,6 +51,6 @@
     "build:assets": "cd src && WEBPACK_ENV=production webpack",
     "copy:static": "cp -R src/static src/views build/",
     "build": "npm run clean && npm run lint && npm run build:server && npm run build:assets && npm run copy:static",
-    "start": "node build/init.js"
+    "start": "PRODUCTION=true node build/init.js"
   }
 }
