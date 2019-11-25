@@ -4,10 +4,11 @@ import "./db";
 
 dotenv.config();
 
-const PORT = process.env.PORT || 4000;
+const URL = process.env.PRODUCTION ? process.env.URL : "localhost";
+const PORT = process.env.PRODUCTION ? process.env.PORT : 4000;
 
 const handleListening = () => {
-  console.log(`✅ Listening on: http://localhost:${PORT}`);
+  console.log(`✅ Listening on: http://${URL}:${PORT}`);
 };
 
 app.listen(PORT, handleListening);
