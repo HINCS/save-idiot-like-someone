@@ -3,10 +3,7 @@ import mongoose from "mongoose";
 
 dotenv.config();
 
-const { DB_URL } = process.env.PRODUCTION ? process.env : "localhost";
-const { DB_PORT } = process.env.PRODUCTION ? process.env : 27017;
-
-mongoose.connect(`mongodb://${DB_URL}:${DB_PORT}/save-idiot`, {
+mongoose.connect(process.env.DB_URL_PROD, {
   useNewUrlParser: true,
   useFindAndModify: false
 });
