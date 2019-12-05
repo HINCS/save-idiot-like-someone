@@ -3,7 +3,11 @@ import mongoose from "mongoose";
 
 dotenv.config();
 
-mongoose.connect(process.env.DB_URL_PROD, {
+const DB_URL = process.env.PRODUCTION
+  ? process.env.DB_URL
+  : "mongodb://localhost:27017/save-idiot";
+
+mongoose.connect(`${DB_URL}`, {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true

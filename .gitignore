@@ -229,4 +229,3 @@ src/static/
 dist/
 build/
 
-package-lock.json
