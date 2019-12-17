@@ -3,12 +3,14 @@ import mongoose from "mongoose";
 
 dotenv.config();
 
-const { DB_URL } = process.env.PRODUCTION ? process.env : "localhost";
-const { DB_PORT } = process.env.PRODUCTION ? process.env : 27017;
+const DB_URL = process.env.PRODUCTION
+  ? process.env.DB_URL
+  : "mongodb://localhost:27017/save-idiot";
 
-mongoose.connect(`mongodb://${DB_URL}:${DB_PORT}/save-idiot`, {
+mongoose.connect(`${DB_URL}`, {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useFindAndModify: false,
+  useUnifiedTopology: true
 });
 
 const db = mongoose.connection;
