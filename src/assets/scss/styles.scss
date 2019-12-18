@@ -1,3 +1,6 @@
-body {
-  background-color: peachpuff;
-}
+@import "config/reset.scss";
+
+@import "partials/header.scss";
+@import "partials/footer.scss";
+
+@import "pages/intro.scss";

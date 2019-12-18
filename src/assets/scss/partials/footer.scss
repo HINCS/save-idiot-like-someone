@@ -1,0 +1,28 @@
+.footer{
+    background-color: black;
+    color: white;
+    .footer__wrapper{
+        padding: 5px 0;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        .footer__column{
+            padding: 5px;
+            p{
+                color: white;
+                font-weight: 600;
+                font-size: 13px;
+            }
+            &:first-child {
+                width: 100%;
+                justify-self: left;
+            }
+            &:last-child {
+                width: 20%;
+                justify-self: end;
+            }
+        }
+    }
+}
