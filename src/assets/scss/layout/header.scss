@@ -1,22 +1,21 @@
-@import "../variables.scss";
+@import "../variables";
 
-.footer{
-    background-color: $background-color;
-    color: $primary-color;
-    height: $footer-height;
-    .footer__wrapper{
+.header{
+    background-color: $primary-color;
+    color: $background-color;
+    height: $header-height;
+    .header__wrapper{
         padding: 5px 0;
         width: 100%;
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        .footer__column{
+        .header__column{
             padding: 5px;
-            p{
+            i{
                 color: $background-color;
-                font-weight: 600;
-                font-size: 13px;
+                font-size: 25px;
             }
             &:first-child {
                 width: 100%;
@@ -25,6 +24,13 @@
             &:last-child {
                 width: 20%;
                 justify-self: end;
+            }
+            ul{
+                display: flex;
+                color: $background-color;
+                li{
+                    margin-left: 10px;
+                }
             }
         }
     }
