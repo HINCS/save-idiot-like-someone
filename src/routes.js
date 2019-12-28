@@ -7,15 +7,14 @@ const SEARCH = "/search";
 // User Routes
 const USER = "/users";
 const MENTORING_STATUS = "/mentoring-status";
-const EDIT_PROFILE= "/edit-profile";
+const EDIT_PROFILE = "/edit-profile";
 
-//Writing Routes
+// Writing Routes
 const WRITING = "/writings";
 const UPLOAD = "/upload";
 const WRITING_DETAIL = "/:id";
 const EDIT_WRITING = "/:id/edit";
 const DELETE_WRITING = "/:id/delete";
-
 
 const routes = {
   intro: INTRO,

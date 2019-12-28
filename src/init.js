@@ -2,9 +2,9 @@ import * as dotenv from "dotenv";
 import app from "./app";
 import "./db";
 
-dotenv.config();
-
 import "./models/User";
+
+dotenv.config();
 
 const URL = process.env.PRODUCTION ? process.env.URL : "localhost";
 const PORT = process.env.PRODUCTION ? process.env.PORT : 4000;

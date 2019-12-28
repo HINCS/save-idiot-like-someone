@@ -1,6 +1,9 @@
+@import "../variables.scss";
+
 .header{
-    background-color: black;
-    color: white;
+    background-color: $primary-color;
+    color: $background-color;
+    height: $header-height;
     .header__wrapper{
         padding: 5px 0;
         width: 100%;
@@ -11,7 +14,7 @@
         .header__column{
             padding: 5px;
             i{
-                color: white;
+                color: $background-color;
                 font-size: 25px;
             }
             &:first-child {
@@ -24,7 +27,7 @@
             }
             ul{
                 display: flex;
-                color: white;
+                color: $background-color;
                 li{
                     margin-left: 10px;
                 }

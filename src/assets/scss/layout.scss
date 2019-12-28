@@ -1,0 +1,10 @@
+@import "variables.scss";
+
+body {
+  color: $primary-color;
+  background-color: $background-color;
+
+  main{
+    margin: 0 10vw 0;
+  }
+}
