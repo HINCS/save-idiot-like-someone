@@ -4,9 +4,13 @@ html
         <script src="https://kit.fontawesome.com/4035865802.js" crossorigin="anonymous"></script>
         title | #{siteName}
         link(rel="stylesheet", href="/static/styles.css")
+        /// refer to google font.
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap")
+        /// set viewport for responsive view
+        meta(name="viewport", content="width=device-width, initial-scale=1")
     body
         include ./header
-        include ./body
+        main
+            block content
         include ./footer
         script(src="/static/main.js")
-        //script(src="https://kit.fontawesome.com/4035865802.js" crossorigin="anonymous")

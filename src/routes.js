@@ -3,6 +3,7 @@ const INTRO = "/";
 const HOME = "/home";
 const LOGOUT = "/logout";
 const SEARCH = "/search";
+const LOGIN = "/login";
 
 // User Routes
 const USER = "/users";
@@ -21,6 +22,7 @@ const routes = {
   home: HOME,
   logout: LOGOUT,
   search: SEARCH,
+  login: LOGIN,
   user: USER,
   mentoringStatus: MENTORING_STATUS,
   editProfile: EDIT_PROFILE,

@@ -1,31 +1,22 @@
 @import "../variables";
 
-.footer{
-    background-color: $background-color;
-    color: $primary-color;
-    height: $footer-height;
-    .footer__wrapper{
-        padding: 5px 0;
-        width: 100%;
-        margin: 0 auto;
+footer{
+    display: flex;
+    justify-content: center;
+
+    color: $background-color;
+    background-color: $primary-color;
+
+    &>.container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        .footer__column{
-            padding: 5px;
-            p{
-                color: $background-color;
-                font-weight: 600;
-                font-size: 13px;
-            }
-            &:first-child {
-                width: 100%;
-                justify-self: left;
-            }
-            &:last-child {
-                width: 20%;
-                justify-self: end;
-            }
+        grid-template-columns: 1fr;
+
+        max-width: $max-width;
+        width: 100%;
+        padding: 20px;
+
+        &>.footer__column {
+            text-align: center;
         }
     }
 }

@@ -1,0 +1,83 @@
+@import "variables";
+
+.login {
+  display: flex;
+  justify-content: center;
+
+  height: 84vh;
+
+  color: $primary-color;
+  background-color: $background-color;
+
+  &>.container {
+    justify-items: center;
+
+    max-width: $max-width;
+    width: 100%;
+    padding: 20px 25vw 20px;
+
+    text-align: center;
+
+    &>.description {
+      margin-top: 10vh;
+      text-align: right;
+
+      &>.bottom {
+        margin-bottom: 20vh;
+      }
+    }
+
+    &>.sns {
+      height: 40px;
+      margin-top: 20px;
+
+      &>button {
+        width: 100%;
+        height: 100%;
+
+        border-radius: 8px;
+        border: 2px solid;
+        &:active, &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+    }
+    &>.kakao {
+      &>button {
+
+        border-color: rgb(252, 228, 77);
+
+        color: rgb(76, 76, 76);
+        background-color: rgb(252, 228, 77);
+      }
+    }
+    &>.google {
+      &>button {
+
+        &>.blue {
+          color: rgb(0,87,231);
+        }
+        &>.red {
+          color: rgb(214,45,32);
+        }
+        &>.yellow {
+          color: rgb(255,167,0);
+        }
+        &>.green {
+          color: rgb(0,135,68);
+        }
+        background-color: white;
+      }
+    }
+    &>.github {
+      &>button {
+        border-color: rgb(37, 41, 46);
+
+
+        color: rgb(37, 41, 46);
+        background-color: white;
+      }
+    }
+  }
+}

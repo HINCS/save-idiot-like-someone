@@ -1,36 +1,29 @@
 @import "../variables";
 
-.header{
-    background-color: $primary-color;
+header {
+    display: flex;
+    justify-content: center;
+
     color: $background-color;
-    height: $header-height;
-    .header__wrapper{
-        padding: 5px 0;
-        width: 100%;
-        margin: 0 auto;
+    background-color: $primary-color;
+
+    &>.container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        .header__column{
-            padding: 5px;
-            i{
-                color: $background-color;
-                font-size: 25px;
+
+        max-width: $max-width;
+        width: 100%;
+        padding: 20px;
+
+        &>.header__column {
+            font-weight: 800;
+
+            &>h1 {
+                margin-bottom: .5rem;
             }
-            &:first-child {
-                width: 100%;
-                justify-self: left;
-            }
-            &:last-child {
-                width: 20%;
-                justify-self: end;
-            }
-            ul{
-                display: flex;
-                color: $background-color;
-                li{
-                    margin-left: 10px;
-                }
+
+            &>.menu {
+                text-align: right;
             }
         }
     }

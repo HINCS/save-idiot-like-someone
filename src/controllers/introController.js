@@ -1,5 +1,6 @@
 export const intro = (req, res) => res.render("intro");
 export const home = (req, res) => res.render("home");
+export const login = (req, res) => res.render("login");
 export const logout = (req, res) => res.render("logout");
 export const search = (req, res) => res.render("search");
 export const user = (req, res) => res.render("user");

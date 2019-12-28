@@ -1,0 +1,46 @@
+@import "variables";
+
+.intro {
+    display: flex;
+    justify-content: center;
+
+    color: $background-color;
+    background-color: $primary-color;
+
+    .container {
+        max-width: $max-width;
+        width: 100%;
+        padding: 20px;
+
+        line-height: 2rem;
+
+        .introduction {
+            text-align: center;
+            height: max-content;
+
+            margin: 30vh 0 15vh;
+
+            &>h1 {
+                font-size: 3rem;
+                margin-bottom: 1.2rem;
+            }
+            &>.suggestion {
+                margin-top: 10vh;
+                font-size: 1.25rem;
+                font-weight: bolder;
+            }
+        }
+        .question {
+            margin-bottom: 15vh;
+            p {
+                padding-left: 10px ;
+                font-size: 1.25rem;
+            }
+        }
+        .first {
+            margin-top: 30vh;
+        }
+    }
+}
+
+

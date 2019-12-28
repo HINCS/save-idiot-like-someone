@@ -1,13 +1,11 @@
-header.header
-    .header__wrapper
+header
+    .container
         .header__column
-            a(href=routes.home)
-                i.fas.fa-pray
+            h1
+                a(href=routes.home) SILS
         .header__column
-            ul
-                li
-                    a(href="#")
-                        i.fab.fa-github
-                li
-                    a(href="#")
-                        i.fab.fa-google
+            h1.menu
+                if loggedIn
+                    a(href="/user") 프로필 보기
+                else
+                    a(href="/login") 시작하기
