@@ -1,0 +1,11 @@
+header
+    .container
+        .header__column
+            h1
+                a(href=routes.home) SILS
+        .header__column
+            h1.menu
+                if loggedIn
+                    a(href="/user") 프로필 보기
+                else
+                    a(href="/login") 시작하기

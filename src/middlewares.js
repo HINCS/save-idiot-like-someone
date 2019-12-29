@@ -1,7 +1,11 @@
 import routes from "./routes";
 
-export const localsMiddleware = (req, res, next) => {
-    res.locals.siteName = "save-idiot";
-    res.locals.routes = routes;
-    next();
-}
+const localsMiddleware = (req, res, next) => {
+  res.locals.siteName = "save-idiot";
+  // / it should return 'true' if user is logged in.
+  res.locals.loggedIn = false;
+  res.locals.routes = routes;
+  next();
+};
+
+export default localsMiddleware;

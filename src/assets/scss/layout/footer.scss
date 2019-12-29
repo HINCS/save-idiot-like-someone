@@ -1,0 +1,22 @@
+@import "../variables";
+
+footer{
+    display: flex;
+    justify-content: center;
+
+    color: $background-color;
+    background-color: $primary-color;
+
+    &>.container {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        max-width: $max-width;
+        width: 100%;
+        padding: 20px;
+
+        &>.footer__column {
+            text-align: center;
+        }
+    }
+}

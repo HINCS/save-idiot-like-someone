@@ -1,6 +1,11 @@
 import express from "express";
 import routes from "../routes";
-import { writing, upload, editWriting, deleteWriting } from "../controllers/introController";
+import {
+  writing,
+  upload,
+  editWriting,
+  deleteWriting
+} from "../controllers/introController";
 
 const writingRouter = express.Router();
 

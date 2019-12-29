@@ -1,6 +1,7 @@
-@import "config/reset.scss";
+@import "reset";
+@import "layout/layout";
+@import "layout/header";
+@import "layout/footer";
 
-@import "partials/header.scss";
-@import "partials/footer.scss";
-
-@import "pages/intro.scss";
+@import "intro";
+@import "login";

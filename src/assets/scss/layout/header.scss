@@ -1,0 +1,30 @@
+@import "../variables";
+
+header {
+    display: flex;
+    justify-content: center;
+
+    color: $background-color;
+    background-color: $primary-color;
+
+    &>.container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        max-width: $max-width;
+        width: 100%;
+        padding: 20px;
+
+        &>.header__column {
+            font-weight: 800;
+
+            &>h1 {
+                margin-bottom: .5rem;
+            }
+
+            &>.menu {
+                text-align: right;
+            }
+        }
+    }
+}
