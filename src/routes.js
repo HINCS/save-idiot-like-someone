@@ -10,6 +10,19 @@ const USER = "/users";
 const MENTORING_STATUS = "/mentoring-status";
 const EDIT_PROFILE = "/edit-profile";
 
+//Github
+const GITHUB = "/auth/github";
+const GITHUB_CALLBACK = "/auth/github/callback";
+
+//Google
+const GOOGLE = "/auth/google";
+const GOOGLE_CALLBACK = "/auth/google/callback";
+
+//Kakao
+const KAKAO = "/auth/kakao";
+const KAKAO_CALLBACK = "/auth/kakao/callback";
+
+
 // Writing Routes
 const WRITING = "/writings";
 const UPLOAD = "/upload";
@@ -30,7 +43,13 @@ const routes = {
   upload: UPLOAD,
   writingDetail: WRITING_DETAIL,
   editWriting: EDIT_WRITING,
-  deleteWriting: DELETE_WRITING
+  deleteWriting: DELETE_WRITING,
+  github: GITHUB,
+  githubCallback: GITHUB_CALLBACK,
+  google: GOOGLE,
+  googleCallback: GOOGLE_CALLBACK,
+  kakao: KAKAO,
+  kakaoCallback: KAKAO_CALLBACK
 };
 
 export default routes;
