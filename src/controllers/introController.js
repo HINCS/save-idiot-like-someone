@@ -36,7 +36,7 @@ export const postGithubLogin = (req, res) => {
 
 export const googleLogin = passport.authenticate("google", { scope: ['profile', 'email'] });
 
-export const googleLoginCallback = async (_, __, profile, cb) => {
+export const googleLoginCallback = async (_, __, profile, done) => {
     const { _json: { sub, picture, name, email } } = profile;
     try{
         const user = await User.findOne({ email });
@@ -63,8 +63,25 @@ export const postGoogleLogin = (req, res) => {
 
 export const kakaoLogin = passport.authenticate("kakao");
 
-export const kakaoLoginCallback = (_, __, profile, cb) => {
-    console.log(accesstoken, refreshtoken, profile, cb);    
+export const kakaoLoginCallback = async(_, __, profile, cb) => {
+    const { _json: { id, profile_image, nickname, kakao_account: { email } } } = profile;
+    try{
+        const user = await User.findOne({ email });
+        if(user){
+            user.kakaoId = id;
+            user.save();
+            return cb(null, user);
+        }
+        const newUser = await User.create({
+            email,
+            nickname,
+            kakaoId: id,
+            avatarUrl: profile_image
+        });
+        return cb(null, newUser);
+    }catch(error){
+        return cb(error);
+    }    
 }
 
 export const postKakaoLogin = (req, res) => {

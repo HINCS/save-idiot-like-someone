@@ -7,7 +7,6 @@ import passport from "passport";
 import session from "express-session";
 import userRouter from "./routers/userRouter";
 import writingRouter from "./routers/writingRouter";
-import path from "path";
 import mongoStore from "connect-mongo";
 import mongoose from "mongoose";
 
