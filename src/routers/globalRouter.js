@@ -1,7 +1,7 @@
 import express from "express";
 import passport from "passport";
 import routes from "../routes";
-import { intro, home, login, githubLogin, postGithubLogin, googleLogin, postGoogleLogin, kakaoLogin, postKakaoLogin } from "../controllers/introController";
+import { intro, home, login, githubLogin, postGithubLogin, googleLogin, postGoogleLogin, kakaoLogin, postKakaoLogin } from "../controllers/userController";
 
 const globalRouter = express.Router();
 

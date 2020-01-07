@@ -1,6 +1,7 @@
 import passport from "passport";
 import routes from "../routes";
 import User from "../models/User";
+import alert from 'alert-node';
 
 
 export const intro = (req, res) => res.render("intro");
@@ -14,14 +15,13 @@ export const githubLoginCallback = async(_, __, profile, cb) => {
     try{
         const user = await User.findOne({ email });
         if(user){
-            user.githubId = id;
-            user.save();
+            alert("이미 가입된 이메일입니다");
             return cb(null, user);
         }
         const newUser = await User.create({
             email,
             name,
-            githubId: id,
+            id: id,
             avatarUrl: avatar_url
         });
         return cb(null, newUser);
@@ -31,24 +31,23 @@ export const githubLoginCallback = async(_, __, profile, cb) => {
 }
 
 export const postGithubLogin = (req, res) => {
-    res.redirect(routes.home);
+    res.redirect(`/users${routes.addtionalProfile}`);
 }
 
 export const googleLogin = passport.authenticate("google", { scope: ['profile', 'email'] });
 
-export const googleLoginCallback = async (_, __, profile, done) => {
+export const googleLoginCallback = async (_, __, profile, cb) => {
     const { _json: { sub, picture, name, email } } = profile;
     try{
         const user = await User.findOne({ email });
         if(user){
-            user.googleId = sub;
-            user.save();
+            alert("이미 가입된 이메일입니다");
             return cb(null, user);
         }
         const newUser = await User.create({
             email,
             name,
-            googleId: sub,
+            id: sub,
             avatarUrl: picture
         });
         return cb(null, newUser);
@@ -68,14 +67,13 @@ export const kakaoLoginCallback = async(_, __, profile, cb) => {
     try{
         const user = await User.findOne({ email });
         if(user){
-            user.kakaoId = id;
-            user.save();
+            alert("이미 가입된 이메일입니다");
             return cb(null, user);
         }
         const newUser = await User.create({
             email,
             nickname,
-            kakaoId: id,
+            id: id,
             avatarUrl: profile_image
         });
         return cb(null, newUser);
@@ -95,6 +93,21 @@ export const logout = (req, res) => {
 
 export const search = (req, res) => res.render("search");
 export const user = (req, res) => res.render("user");
+
+export const getAddtionalProfile = (req, res) => res.render("addtionalProfile");
+
+export const postAddtionalProfile = async(req, res) => {
+    const {
+        body: {tags, description}
+    } = req;
+    const newUser = await User.update({
+        tags,
+        description
+    });
+    req.user.save();
+    res.redirect(routes.home);
+}
+
 export const mentoringStatus = (req, res) => res.render("mentoringStatus");
 export const editProfile = (req, res) => res.render("editProfile");
 export const writing = (req, res) => res.render("writing");

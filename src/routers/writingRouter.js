@@ -5,7 +5,7 @@ import {
   upload,
   editWriting,
   deleteWriting
-} from "../controllers/introController";
+} from "../controllers/userController";
 
 const writingRouter = express.Router();
 

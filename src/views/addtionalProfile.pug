@@ -1,0 +1,61 @@
+extends layout/main
+
+block content
+    .addtionalProfile
+        .container
+            form(action=routes.home, method="post")
+                .profile
+                    .first
+                        h2 멘토링이 가능한 언어
+                        .tags
+                            .python
+                                label(for="tags") Python
+                                input(type="checkbox" name="python" id="tags")
+                            .java
+                                label(for="tags") Java
+                                input(type="checkbox" name="java" id="tags")
+                            .javascript
+                                label(for="tags") JavaScript 
+                                input(type="checkbox" name="js" id="tags")
+                            .c
+                                label(for="tags") C
+                                input(type="checkbox" name="c" id="tags")
+                            .html
+                                label(for="tags") Html
+                                input(type="checkbox" name="html" id="tags")
+                            .css
+                                label(for="tags") Css
+                                input(type="checkbox" name="css" id="tags")
+                            .go
+                                label(for="tags") Go
+                                input(type="checkbox" name="go" id="tags") 
+                    .second
+                        h2 멘토링을 원하는 언어
+                        .tags
+                            .python
+                                label(for="tags") Python
+                                input(type="checkbox" name="python" id="tags")
+                            .java
+                                label(for="tags") Java
+                                input(type="checkbox" name="java" id="tags")
+                            .javascript
+                                label(for="tags") JavaScript 
+                                input(type="checkbox" name="js" id="tags")
+                            .c
+                                label(for="tags") C
+                                input(type="checkbox" name="c" id="tags")
+                            .html
+                                label(for="tags") Html
+                                input(type="checkbox" name="html" id="tags")
+                            .css
+                                label(for="tags") Css
+                                input(type="checkbox" name="css" id="tags")
+                            .go
+                                label(for="tags") Go
+                                input(type="checkbox" name="go" id="tags")
+                    .third
+                        h2 자기소개(혹은 경력) 작성
+                        .introduce
+                            textarea(name="description" id="description" placeholder="introduce yourself" cols="70" rows="20")
+                    input(type="submit", value="submit")                                           
+            

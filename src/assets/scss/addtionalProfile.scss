@@ -1,0 +1,63 @@
+@import "variables";
+
+.addtionalProfile{
+    display: flex;
+    justify-content: center;
+
+    color: $background-color;
+    background-color: $primary-color;
+
+    &>.container {
+        justify-items: center;
+
+        max-width: $max-width;
+        width: 100%;
+        padding: 20px;
+        line-height: 2rem;
+
+        text-align: center;
+        .profile {
+            text-align: center;
+            height: max-content;
+            .first{
+                &>h2 {
+                    font-size: 2rem;
+                    margin-bottom: 1.2rem;
+                }
+                .tags{
+                    margin-bottom: 50px;
+                }
+            }
+            .second{
+                &>h2 {
+                    font-size: 2rem;
+                    margin-bottom: 1.2rem;
+                }
+                .tags{
+                    margin-bottom: 50px;
+                }
+            }
+            .third{
+                &>h2 {
+                    font-size: 2rem;
+                    margin-bottom: 1.2rem;
+                }
+                .introduce{
+                    &>textarea{
+                        border-radius: 8px;
+                    }
+                }
+            }
+            &>input{
+                width: 150px;
+                height: 40px;
+                margin-top: 30px;
+
+                border-radius: 8px;
+                border: 2px solid;
+                
+            }
+        }
+
+    }
+}

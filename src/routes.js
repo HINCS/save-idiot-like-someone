@@ -7,18 +7,13 @@ const LOGIN = "/login";
 
 // User Routes
 const USER = "/users";
+const ADDTIONAL_PROFILE = "/addtional-profile"
 const MENTORING_STATUS = "/mentoring-status";
 const EDIT_PROFILE = "/edit-profile";
-
-//Github
 const GITHUB = "/auth/github";
 const GITHUB_CALLBACK = "/auth/github/callback";
-
-//Google
 const GOOGLE = "/auth/google";
 const GOOGLE_CALLBACK = "/auth/google/callback";
-
-//Kakao
 const KAKAO = "/auth/kakao";
 const KAKAO_CALLBACK = "/auth/kakao/callback";
 
@@ -37,6 +32,7 @@ const routes = {
   search: SEARCH,
   login: LOGIN,
   user: USER,
+  addtionalProfile: ADDTIONAL_PROFILE,
   mentoringStatus: MENTORING_STATUS,
   editProfile: EDIT_PROFILE,
   writing: WRITING,
