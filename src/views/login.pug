@@ -6,9 +6,9 @@ block content
             .description
                 h4 누구에게도 말하지 못했던 답답했던 마음을
                 h4.bottom 풀어가는 즐거운 경험
-            .sns.kakao
+            a.sns.kakao(href=routes.kakao)
                 button Kakao로 시작하기
-            .sns.google
+            a.sns.google(href=routes.google)
                 button
                     span.blue G
                     span.red o
@@ -16,6 +16,6 @@ block content
                     span.blue g
                     span.green l
                     span.red e
-                    span.others 로 시작하기
-            .sns.github
+                    span.others 로 시작하기   
+            a.sns.github(href=routes.github)
                 button Github으로 시작하기

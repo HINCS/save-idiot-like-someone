@@ -5,6 +5,7 @@ const localsMiddleware = (req, res, next) => {
   // / it should return 'true' if user is logged in.
   res.locals.loggedIn = false;
   res.locals.routes = routes;
+  res.locals.user = req.user || {};
   next();
 };
 
