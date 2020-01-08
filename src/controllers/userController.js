@@ -31,7 +31,13 @@ export const githubLoginCallback = async(_, __, profile, cb) => {
 }
 
 export const postGithubLogin = (req, res) => {
-    res.redirect(`/users${routes.addtionalProfile}`);
+    console.log(req.user);
+    console.log(req.body);
+    if(req.user.tags1 === [] || req.user.tags2 === [] || req.user.__v === 0){
+        res.redirect(`/users${routes.addtionalProfile}`);
+    }else{
+        res.redirect(routes.home);
+    }
 }
 
 export const googleLogin = passport.authenticate("google", { scope: ['profile', 'email'] });
@@ -98,13 +104,23 @@ export const getAddtionalProfile = (req, res) => res.render("addtionalProfile");
 
 export const postAddtionalProfile = async(req, res) => {
     const {
-        body: {tags, description}
+        body
     } = req;
-    const newUser = await User.update({
-        tags,
-        description
-    });
+    const { email } = req.user.email;
+    User.findByIdAndUpdate(
+        email,
+        req.body,
+        {new: true},
+        (err, todo) => {
+            if (err) 
+                return res.status(500).send(err); 
+        }
+    )
     req.user.save();
+    
+    console.log(body);
+    console.log(req.user);
+    console.log(req.params);
     res.redirect(routes.home);
 }
 

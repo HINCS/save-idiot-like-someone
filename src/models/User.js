@@ -6,8 +6,13 @@ const UserSchema = new mongoose.Schema({
   email: String,
   avatarUrl: String,
   id: Number,
-  tags: [String],
-  description: String
+  tags1: [String],
+  tags2: [String],
+  description: String,
+  createOn: {
+    type: Date,
+    default: Date.now
+  }
 });
 
 UserSchema.plugin(passportLocalMongoose, { usernameField: "email" });
