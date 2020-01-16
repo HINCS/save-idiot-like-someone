@@ -12,7 +12,13 @@ const UserSchema = new mongoose.Schema({
   createOn: {
     type: Date,
     default: Date.now
-  }
+  },
+  writings: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      refs: "Writing"
+    }
+  ]
 });
 
 UserSchema.plugin(passportLocalMongoose, { usernameField: "email" });

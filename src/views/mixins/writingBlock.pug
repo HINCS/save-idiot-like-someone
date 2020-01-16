@@ -1,0 +1,12 @@
+mixin writingBlock(writing = {})
+    .writingBlock 
+        .writing__contents
+            p.contents__category=writing.category
+            p.contents__tags=writing.tags
+            p.contents__title=writing.title
+            a.contents__content(href=`/writings${routes.writingDetail(writing.creator)}`)   
+                p=writing.content
+            a.contents__creator(href=routes.userDetail)
+                p=writing.author    
+            p.contents__createAt=writing.createAt
+

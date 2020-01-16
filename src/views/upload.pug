@@ -1,4 +1,37 @@
 extends layout/main
 
 block content
-    p Upload
+    .form-container
+        form(action=`/writings${routes.upload}`, method="post")
+            select(name="category" id="category")
+                each val in ["mentoringOffer", "mentor", "mentee"]
+                    option=val
+            .tags
+                .python
+                    label(for="tags") Python
+                    input(type="checkbox" name="tags" id="python" value="python")
+                .java
+                    label(for="tags") Java
+                    input(type="checkbox" name="tags" id="java" value="java")
+                .javascript
+                    label(for="tags") JavaScript 
+                    input(type="checkbox" name="tags" id="java" value="javascript")
+                .c
+                    label(for="tags") C
+                    input(type="checkbox" name="tags" id="c" value="c")
+                .html
+                    label(for="tags") Html
+                    input(type="checkbox" name="tags" id="html" value="html")
+                .css
+                    label(for="tags") Css
+                    input(type="checkbox" name="tags" id="css" value="css")
+                .go
+                    label(for="tags") Go
+                    input(type="checkbox" name="tags" id="go" value="go")
+            .main__contents
+                .title         
+                    input(type="text", placeholder="Title", name="title", required=true)
+                .content
+                    textarea(placeholder="content", name="content", required=true)
+                .submit
+                    input(type="submit", value="submit")

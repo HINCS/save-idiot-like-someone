@@ -1,0 +1,22 @@
+.writingBlock{
+    .writing__contents{
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        border: 1px solid white;
+        
+        .contents__title{
+            grid-column: span 2;
+
+        }
+        .contents__content{
+            grid-column: span 2;
+
+        }
+        .contents__createAt{
+            grid-column: span 2;
+
+        }
+        
+
+    }       
+}

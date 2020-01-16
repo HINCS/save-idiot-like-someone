@@ -1,0 +1,108 @@
+@import "variables";
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    color: $background-color;
+    background-color: $primary-color;
+    .writings{
+        margin-top: 1rem;
+        &>h2{
+            margin-bottom: 0;
+        }
+        &>a{
+            &>button{
+                width: 60px;
+                height: 20px;
+                margin-left: 1020px;
+            }
+        }
+        .writing__property{
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            margin-bottom: 5px;
+            border: 1px solid white;
+            .writing__title{
+                grid-column: span 2;
+    
+            }
+            .writing__content{
+                grid-column: span 2;
+    
+            }
+            .writing__createAt{
+                grid-column: span 2;
+    
+            }
+        }
+    }
+    .mentee{
+        margin-top: 1rem;
+        &>h2{
+            margin-bottom: 0;
+        }
+        &>a{
+            &>button{
+                width: 60px;
+                height: 20px;
+                margin-left: 1020px;
+            }
+        }
+        .mentee__property{
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            margin-bottom: 5px;
+            border: 1px solid white;
+            .mentee__title{
+                grid-column: span 2;
+    
+            }
+            .mentee__content{
+                grid-column: span 2;
+    
+            }
+            .mentee__createAt{
+                grid-column: span 2;
+    
+            }
+        }
+    }
+    .mentor{
+        margin-top: 1rem;
+        &>h2{
+            margin-bottom: 0;
+        }
+        &>a{
+            &>button{
+                width: 60px;
+                height: 20px;
+                margin-left: 1020px;
+            }
+        }
+        .mentor__property{
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            margin-bottom: 5px;
+            border: 1px solid white;
+            .mentor__title{
+                grid-column: span 2;
+    
+            }
+            .mentor__content{
+                grid-column: span 2;
+    
+            }
+            .mentor__createAt{
+                grid-column: span 2;
+    
+            }
+        }
+    }
+
+
+}

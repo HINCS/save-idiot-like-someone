@@ -37,7 +37,13 @@ const routes = {
   editProfile: EDIT_PROFILE,
   writing: WRITING,
   upload: UPLOAD,
-  writingDetail: WRITING_DETAIL,
+  writingDetail: id => {
+    if(id){
+        return `/writings/${id}`;
+    }else{
+        return WRITING_DETAIL;
+    }
+},
   editWriting: EDIT_WRITING,
   deleteWriting: DELETE_WRITING,
   github: GITHUB,

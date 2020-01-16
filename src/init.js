@@ -3,6 +3,7 @@ import app from "./app";
 import "./db";
 
 import "./models/User";
+import "./models/Writing";
 
 dotenv.config();
 

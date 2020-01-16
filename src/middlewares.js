@@ -6,6 +6,7 @@ const localsMiddleware = (req, res, next) => {
   res.locals.loggedIn = false;
   res.locals.routes = routes;
   res.locals.user = req.user || {};
+  console.log(req.user);
   next();
 };
 

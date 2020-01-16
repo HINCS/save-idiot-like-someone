@@ -1,4 +1,65 @@
 extends layout/main
+include mixins/writingBlock
 
 block content
-    p Home
+    .home
+        .writings
+            h2 MentoringOffer Writings
+            a(href=`/writings${routes.upload}`)
+                button +write
+            .writing__property
+                p.writing__category category
+                p.writing__tags tags
+                p.writing__title title
+                p.writing__content content
+                p.writing__creator author
+                p.writing__createAt createDate 
+            each item in writings
+                +writingBlock({
+                    category: item.category,
+                    tags: item.tags,
+                    title: item.title,
+                    content: item.content,
+                    author: item.author,
+                    createAt: item.createAt
+                })
+        .mentee
+            h2 Mentee Writings
+            a(href=`/writings${routes.upload}`) 
+                button +write
+            .mentee__property
+                p.mentee__category category
+                p.mentee__tags tags
+                p.mentee__title title
+                p.mentee__content content
+                p.mentee__creator author
+                p.mentee__createAt createDate 
+            each item in menteeWritings
+                +writingBlock({
+                    category: item.category,
+                    tags: item.tags,
+                    title: item.title,
+                    content: item.content,
+                    author: item.author,
+                    createAt: item.createAt
+                })
+        .mentor
+            h2 Mentor Writings
+            a(href=`/writings${routes.upload}`) 
+                button +write
+            .mentor__property
+                p.mentor__category category
+                p.mentor__tags tags
+                p.mentor__title title
+                p.mentor__content content
+                p.mentor__creator author
+                p.mentor__createAt createDate     
+            each item in mentorWritings
+                +writingBlock({
+                    category: item.category,
+                    tags: item.tags,
+                    title: item.title,
+                    content: item.content,
+                    author: item.author,
+                    createAt: item.createAt
+                })            
